@@ -11,7 +11,7 @@ for(const image of manifest){
   check(!names.has(image.filename),`Duplicate filename: ${image.filename}`);names.add(image.filename);
   check(image.width>0 && image.height>0,`Invalid dimensions: ${image.id}`);
   check(image.orientation===(image.width>image.height?'landscape':image.width<image.height?'portrait':'square'),`Incorrect orientation: ${image.id}`);
-  check(image.filename.includes('trang-phuc-'),`Unclassified filename: ${image.id}`);
+  check(image.filename.includes('-outfit-'),`Unclassified filename: ${image.id}`);
   for(const field of ['src','thumbnail'])check(fs.existsSync(path.join(root,image[field])),`Missing ${field}: ${image.id}`);
 }
 function walk(directory){return fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>entry.name.startsWith('.')?[]:entry.isDirectory()?walk(path.join(directory,entry.name)):[path.join(directory,entry.name)]);}

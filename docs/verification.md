@@ -27,3 +27,14 @@ Trình xem dùng chung đã kiểm tra: trước/sau, giới hạn đầu/cuối
 **Giới hạn xác minh:** Fullscreen API bị trình duyệt kiểm thử từ chối; nút hiển thị thông báo thay thế và gallery tiếp tục hoạt động. Fullscreen chỉ hoạt động khi môi trường trình duyệt cho phép. Chưa kiểm tra cử chỉ vuốt trên thiết bị cảm ứng vật lý. Không gọi dịch vụ gửi newsletter, checkout hay đăng nhập thực tế.
 
 Ảnh kiểm chứng: [Desktop](preview-desktop.jpg), [Mobile](preview-mobile.jpg), [Bản gốc](reference-desktop.jpg). Ảnh mobile được cắt phần đầu của screenshot toàn trang để dễ xem.
+
+
+## English interface validation — 12 November 2026
+
+- PASS: English navigation, filters, captions, alt text, accessibility labels and viewer messages in both versions.
+- PASS: all 78 image filenames use English outfit colors and orientations; source provenance and stable photo IDs are retained.
+- PASS: Gallery color + portrait + search filters return 1 matching villa photo; saved-photo feedback and copy-link feedback use English.
+- PASS: Dunnio Life pink + shirt search returns 2 photos; empty results and reset display English copy.
+- PASS: original reference viewers show English captions and controls for both collections.
+- PASS: desktop 1280 px and mobile 390 × 844 px have no horizontal overflow. Mobile filters have visible labels and complete selected option names.
+- PASS: refreshed desktop, mobile and reference screenshots.

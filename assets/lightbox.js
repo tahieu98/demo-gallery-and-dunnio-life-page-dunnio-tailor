@@ -2,18 +2,18 @@
 window.createImageViewer = function createImageViewer() {
   const modal = document.createElement('dialog');
   modal.className = 'image-viewer';
-  modal.setAttribute('aria-label', 'Trình xem ảnh');
+  modal.setAttribute('aria-label', 'Photo viewer');
   modal.innerHTML = `<div class="viewer-toolbar"><span class="viewer-count" aria-live="polite"></span><div>
-    <button type="button" data-action="play" aria-label="Phát trình chiếu" title="Trình chiếu">▷</button>
-    <button type="button" data-action="zoom" aria-label="Phóng to ảnh" aria-pressed="false" title="Phóng to">＋</button>
-    <button type="button" data-action="fullscreen" aria-label="Toàn màn hình" title="Toàn màn hình">⛶</button>
-    <button type="button" data-action="thumbs" aria-label="Hiện ảnh thu nhỏ" aria-pressed="false" title="Ảnh thu nhỏ">▦</button>
-    <button type="button" data-action="share" aria-label="Sao chép liên kết ảnh" title="Chia sẻ">↗</button>
-    <a class="viewer-download" download aria-label="Tải ảnh" title="Tải ảnh">↓</a>
-    <button type="button" data-action="close" aria-label="Đóng trình xem ảnh" title="Đóng (Esc)">×</button></div></div>
-    <div class="viewer-stage"><button type="button" class="viewer-prev" aria-label="Ảnh trước">‹</button>
+    <button type="button" data-action="play" aria-label="Start slideshow" title="Slideshow">▷</button>
+    <button type="button" data-action="zoom" aria-label="Zoom photo" aria-pressed="false" title="Zoom">＋</button>
+    <button type="button" data-action="fullscreen" aria-label="Full screen" title="Full screen">⛶</button>
+    <button type="button" data-action="thumbs" aria-label="Show thumbnails" aria-pressed="false" title="Thumbnails">▦</button>
+    <button type="button" data-action="share" aria-label="Copy photo link" title="Share">↗</button>
+    <a class="viewer-download" download aria-label="Download photo" title="Download photo">↓</a>
+    <button type="button" data-action="close" aria-label="Close photo viewer" title="Close (Esc)">×</button></div></div>
+    <div class="viewer-stage"><button type="button" class="viewer-prev" aria-label="Previous photo">‹</button>
     <div class="viewer-image-wrap"><img class="viewer-image" alt=""></div>
-    <button type="button" class="viewer-next" aria-label="Ảnh tiếp theo">›</button></div>
+    <button type="button" class="viewer-next" aria-label="Next photo">›</button></div>
     <div class="viewer-caption"></div><div class="viewer-thumbs" hidden></div><p class="viewer-status" role="status"></p>`;
   document.body.append(modal);
   const $ = selector => modal.querySelector(selector);
@@ -21,7 +21,7 @@ window.createImageViewer = function createImageViewer() {
   function stop() {
     clearInterval(timer); timer = null;
     $('[data-action="play"]').textContent = '▷';
-    $('[data-action="play"]').setAttribute('aria-label', 'Phát trình chiếu');
+    $('[data-action="play"]').setAttribute('aria-label', 'Start slideshow');
   }
   function show(next) {
     index = Math.max(0, Math.min(items.length - 1, next));
@@ -64,17 +64,17 @@ window.createImageViewer = function createImageViewer() {
       if (index === items.length - 1) show(0);
       timer = setInterval(() => show(index + 1), 3500);
       $('[data-action="play"]').textContent = 'Ⅱ';
-      $('[data-action="play"]').setAttribute('aria-label', 'Dừng trình chiếu');
+      $('[data-action="play"]').setAttribute('aria-label', 'Pause slideshow');
     }
     if (action === 'fullscreen') {
       try {
         if (document.fullscreenElement) await document.exitFullscreen();
         else await modal.requestFullscreen();
-      } catch { $('.viewer-status').textContent = 'Trình duyệt hiện tại không hỗ trợ toàn màn hình.'; }
+      } catch { $('.viewer-status').textContent = 'Full screen is unavailable in this browser.'; }
     }
     if (action === 'share') {
       const url = new URL(location.href); url.hash = `photo=${items[index].id}`;
-      try { await navigator.clipboard.writeText(url.href); $('.viewer-status').textContent = 'Đã sao chép liên kết ảnh.'; }
+      try { await navigator.clipboard.writeText(url.href); $('.viewer-status').textContent = 'Photo link copied.'; }
       catch { $('.viewer-status').textContent = url.href; }
     }
   });
@@ -97,7 +97,7 @@ window.createImageViewer = function createImageViewer() {
       items = list; if (!items.length) return;
       opener = trigger;
       $('.viewer-thumbs').replaceChildren(...items.map((item, i) => {
-        const button = document.createElement('button'); button.type = 'button'; button.setAttribute('aria-label', `Xem ảnh ${i + 1}: ${item.subject}`);
+        const button = document.createElement('button'); button.type = 'button'; button.setAttribute('aria-label', `View photo ${i + 1}: ${item.subject}`);
         const img = document.createElement('img'); img.src = item.thumbnail || item.src; img.alt = ''; img.loading = 'lazy';
         button.append(img); button.addEventListener('click', () => { stop(); show(i); }); return button;
       }));

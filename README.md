@@ -51,7 +51,7 @@ Cả hai bản có xem ảnh lớn, trước/sau, phím mũi tên, Home/End, Esc
 
 Ảnh cưới lấy trang phục chú rể; ảnh đông người ghi chú chủ thể trong CSV. Phân loại màu bằng xem ảnh, không lấy màu nền. Kích thước gốc giữ trong metadata. WebP tối đa 1920 px, không upscale. Bản cải tiến dùng object-fit: contain trong lưới và giữ tỉ lệ gốc trong lightbox. Ảnh nguồn nhỏ không được tự phục hồi chi tiết.
 
-Ví dụ: `gallery-trang-phuc-den-anh-ngang-001.webp`. Hai phiên bản dùng chung bộ ảnh để tiết kiệm dung lượng.
+Ví dụ: `gallery-outfit-black-landscape-001.webp`. Hai phiên bản dùng chung bộ ảnh để tiết kiệm dung lượng.
 
 ## Kiểm tra
 
@@ -67,3 +67,6 @@ node --check assets/lightbox.js
 Repo giữ riêng tư, Actions tắt, Pages không bật. Source lưu bằng Git, không upload artifact, không dùng Git LFS. Bốn trang ở hai repo dùng khoảng 25 MiB mã và tài nguyên, không cần runner hay CI. GitHub Free không cung cấp Pages cho repo private; nếu cần URL công khai sau này, chọn static hosting hoặc cân nhắc visibility/plan riêng.
 
 Nguồn: https://dunniotailor.com/gallery.html . Hình ảnh, font, logo và CSS tham chiếu thuộc website nguồn; demo phục vụ đối chiếu thiết kế.
+
+
+English is the default interface language for both the original reference and proposed design, including filters, image captions, accessibility labels and viewer messages. Image files use English color and orientation names; original source names and URLs are retained for provenance.

@@ -3,7 +3,7 @@
 | Trước | Sau | Lý do |
 | --- | --- | --- |
 | Masonry ưu tiên lấp khoảng trống | Nhóm màu trang phục, rồi Dọc → Ngang → Vuông | Dễ tìm và so sánh outfit cùng màu |
-| Tên ảnh kỹ thuật | gallery-trang-phuc-{mau}-{khung-hinh}-{so}.webp | Dễ quản lý, truy ngược |
+| Tên ảnh kỹ thuật | gallery-outfit-{color}-{orientation}-{order}.webp | Dễ quản lý, truy ngược |
 | Thiếu mô tả | Alt, chủ thể, màu, kích thước | Tìm kiếm, tiếp cận và biên tập |
 | Không có công cụ khám phá | Chip màu, tìm kiếm, bộ lọc, lưu ảnh, đếm | Giảm thời gian tìm cảm hứng |
 | Thumbnail bị crop theo style nguồn | Lưới contain, lightbox toàn ảnh | Giữ trọn trang phục |
@@ -34,3 +34,6 @@ Giữ CSS, crop thumbnail, header/footer và trình tự nguồn. JavaScript Dru
 Chỉnh metadata tại assets/image-data.js, đồng bộ CSV/JSON. Giữ ID khi đổi màu hoặc tên ảnh. original/ là mốc tham chiếu. Script và snapshot tái tạo nằm trong audit-notes ở local cạnh hai dự án.
 
 Hướng dẫn tham khảo: ui-ux-pro-max-skill và emilkowalski/skills/skills/emil-design-eng trong bộ skill người dùng cung cấp.
+
+
+English is the default interface language for both the original reference and proposed design, including filters, image captions, accessibility labels and viewer messages. Image files use English color and orientation names; original source names and URLs are retained for provenance.

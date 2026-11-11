@@ -62,7 +62,7 @@
     const input=form.querySelector('input:not([type=hidden]):not([type=submit])');
     if(input){input.type='email';input.required=true;input.setAttribute('aria-label','Email address');input.autocomplete='email';}
     const status=document.createElement('p');status.setAttribute('role','status');status.className='reference-form-status';form.append(status);
-    form.addEventListener('submit',event=>{event.preventDefault();if(form.reportValidity()){status.textContent='Demo: your email is valid. No subscription has been sent. Liên hệ support@dunniotailor.com để đăng ký thực tế.';}});
+    form.addEventListener('submit',event=>{event.preventDefault();if(form.reportValidity()){status.textContent='Demo: your email is valid. No subscription has been sent. Contact support@dunniotailor.com to subscribe.';}});
   }
   function deepLink(){const id=new URLSearchParams(location.hash.slice(1)).get('photo');const index=items.findIndex(item=>item.id===id);if(index>=0)viewer.open(items,index);}
   window.addEventListener('hashchange',deepLink);deepLink();
