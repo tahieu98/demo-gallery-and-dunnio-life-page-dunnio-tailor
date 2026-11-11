@@ -1,0 +1,11 @@
+{
+  "name": "gallery-page-dunnio-tailor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dunnio reference and improved static gallery demos",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs",
+    "verify": "node scripts/verify.mjs"
+  }
+}
