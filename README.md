@@ -19,6 +19,8 @@ Run `npm start` or double-click `start-local.cmd`. No installation is needed. Op
 
 ## Order 2 — 13 November 2026
 
+Order 3 updates the desktop hero on both improved pages: 10px vertical padding, a 1:3 text/photo split, no vertical divider and three collection photos. Tablet/mobile retain their existing hero treatment. See [Order 3 design and verification](docs/order-3-design.md).
+
 Both proposals now use four separate dropdown filters — **Outfit, Color, Occasion, Situation** — plus Saved on one desktop/tablet row. Mobile has a fixed right-edge Filter button opening a modal with all four groups. Changes take effect on Apply; Cancel, Escape and outside dismissal discard pending edits. Multiple selections are OR within each field and AND between fields. Search, orientation, sorting and the result bar have been removed.
 
 Collections preserve the original source order, thumbnail crops and responsive shortest-column masonry (7 / 5 / 3 / 2 columns). Full-resolution images open in the viewer, with outfit and context captions. Saved photos and filter URLs remain available.

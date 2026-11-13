@@ -1,0 +1,22 @@
+/* Order 3: a compact desktop introduction with three editorial photos. */
+.hero-photos figure:nth-child(3){display:none}
+
+@media(min-width:1001px){
+  .hero{
+    grid-template-columns:minmax(0,1fr) minmax(0,3fr);
+    gap:24px;
+    padding:10px 0;
+  }
+  .hero>div{min-width:0}
+  .hero h1{font-size:clamp(44px,4vw,64px)}
+  .hero .intro{max-width:100%}
+  .hero-meta{flex-wrap:wrap;gap:8px 12px;margin-top:16px;font-size:11px}
+  .hero-meta span+span{padding-left:12px}
+  .hero-photos{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    border-left:0;
+    padding:0;
+  }
+  .hero-photos figure:nth-child(3){display:block;height:100%}
+  .hero-photos figure:nth-child(2) img{object-position:center top}
+}
