@@ -15,7 +15,22 @@ Online preview: [Combined design comparison](https://tahieu98.github.io/demo-gal
 
 ## Local preview
 
-Run `npm start` or double-click `start-local.cmd`. No installation is needed. Open the printed URL. Set `PORT` if 4173 is in use. Run `npm run verify` to check assets, all 78 photos, inter-collection links and crawler directives.
+Run `npm start` or double-click `start-local.cmd`. No installation is needed. Open the printed URL. Set `PORT` if 4173 is in use. Run `npm run verify` to check assets, all 78 photos, inter-collection links and crawler directives. `npm test` checks filtering and catalog consistency. `npm run test:browser` uses the bundled Playwright runtime and a server at port 4183 (override with `DUNNIO_TEST_URL`).
+
+## Order 2 — 13 November 2026
+
+Both proposals now use four separate dropdown filters — **Outfit, Color, Occasion, Situation** — plus Saved on one desktop/tablet row. Mobile has a fixed right-edge Filter button opening a modal with all four groups. Changes take effect on Apply; Cancel, Escape and outside dismissal discard pending edits. Multiple selections are OR within each field and AND between fields. Search, orientation, sorting and the result bar have been removed.
+
+Collections preserve the original source order, thumbnail crops and responsive shortest-column masonry (7 / 5 / 3 / 2 columns). Full-resolution images open in the viewer, with outfit and context captions. Saved photos and filter URLs remain available.
+
+The 78 photos have visually reviewed English outfit names, renamed image files, primary color, suggested occasions, indoor/outdoor setting, secondary outfits and uncertainty notes. Occasion describes editorial suitable-use suggestions, not verified events.
+
+- [Combined catalog — XLSX](outputs/order-2/dunnio-image-catalog.xlsx)
+- [Combined catalog — UTF-8 CSV](docs/dunnio-image-catalog.csv)
+- [Old/new filename mapping](docs/image-renames.json)
+- [Verification and screenshots](docs/order-2-verification.md)
+
+Per-collection runtime data, JSON manifests and CSV catalogs are synchronized by `python scripts/update-catalog.py` from `scripts/order-2-classification.json`. Preserve stable photo IDs when revising tags. The XLSX builder is retained in the local audit workspace; regenerate the workbook after catalog changes and run `python scripts/verify-catalog-export.py`.
 
 ## Structure
 
@@ -27,6 +42,8 @@ gallery-page-dunnio-tailor/
 dunnio-life-page-dunnio-tailor/
   original/ improved/ assets/ docs/
 scripts/                            # Local server and verification
+shared/                             # Shared filter model, controller and CSS
+outputs/order-2/                    # Combined Excel catalog
 ```
 
 Versions share assets within each collection. The combined site does not require the separate Life checkout. Provenance and design notes are retained in each collection's `docs/` folder.
@@ -45,6 +62,6 @@ The retired homepage is not a publishing source. Its Pages and Actions stay disa
 
 ## Demo boundaries
 
-Original versions preserve source DOM/CSS, image order, thumbnail crops and masonry, with independent JavaScript for local interactions. Proposals group photos by the main subject's outfit color, then portrait/landscape/square. Wedding photos prioritize the groom. Search, filters, saved photos and the viewer work locally and online. Newsletter submission only validates input; live checkout, login and contact destinations open the source website.
+Original versions preserve source DOM/CSS, image order, thumbnail crops and masonry, with independent JavaScript for local interactions. Proposals retain that collection layout while adding compact outfit/context filters. Wedding photos prioritize the groom. Filters, saved photos and the viewer work without a backend. Newsletter submission only validates input; live checkout, login and contact destinations open the source website.
 
 Images, fonts, logo and reference styling originate from [Dunnio Tailor](https://dunniotailor.com/). These demos support design review.

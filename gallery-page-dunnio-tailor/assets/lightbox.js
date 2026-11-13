@@ -29,7 +29,9 @@ window.createImageViewer = function createImageViewer() {
     $('.viewer-image').src = item.src;
     $('.viewer-image').alt = item.alt;
     $('.viewer-count').textContent = `${index + 1} / ${items.length}`;
-    $('.viewer-caption').textContent = `${item.subject} · ${item.colorLabel} · ${item.orientationLabel} · ${item.width} × ${item.height} px`;
+    const occasionNames = {'wedding':'Wedding','business':'Business','formal-event':'Formal event','smart-casual':'Smart casual'};
+    const details = item.outfitLabel ? `${item.outfitLabel} · ${item.colorLabel} · ${item.occasions.map(value => occasionNames[value]).join(', ')} · ${item.situation === 'indoor' ? 'Indoor' : 'Outdoor'}` : `${item.subject} · ${item.colorLabel}`;
+    $('.viewer-caption').textContent = details + (item.secondaryOutfits ? ` · Also visible: ${item.secondaryOutfits}` : '') + ` · ${item.width} × ${item.height} px`;
     $('.viewer-download').href = item.src;
     $('.viewer-download').download = item.filename;
     $('.viewer-prev').disabled = index === 0;

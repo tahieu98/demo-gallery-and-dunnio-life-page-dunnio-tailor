@@ -1,3 +1,5 @@
+> **Current Order 2 checks:** [13 November 2026 verification](../../docs/order-2-verification.md). The report below is historical.
+
 > This report records the earlier standalone verification. For current combined-site paths and hosting status, see [hosting verification](../../docs/hosting-verification.md).
 
 # Kiểm chứng — Style Gallery

@@ -1,0 +1,14 @@
+[
+  {
+    "folder": "gallery-page-dunnio-tailor",
+    "total": 28,
+    "blackCount": 6,
+    "status": "PASS"
+  },
+  {
+    "folder": "dunnio-life-page-dunnio-tailor",
+    "total": 50,
+    "blackCount": 7,
+    "status": "PASS"
+  }
+]
