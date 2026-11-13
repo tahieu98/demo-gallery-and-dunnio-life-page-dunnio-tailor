@@ -4,12 +4,12 @@ One static HTML/CSS/JavaScript site containing the original reference and propos
 
 ## Online preview
 
-Publishing target: [Combined design comparison](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/). Available after Pages is enabled and deployment completes.
+Online preview: [Combined design comparison](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/).
 
 | Collection | Original reference | Proposed design |
 | --- | --- | --- |
-| Style Gallery · 28 photos | [Open reference](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/gallery-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/gallery-page-dunnio-tailor/improved/) |
-| Dunnio Life · 50 photos | [Open reference](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/improved/) |
+| Style Gallery · 28 photos | [Open reference](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/gallery-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/gallery-page-dunnio-tailor/improved/) |
+| Dunnio Life · 50 photos | [Open reference](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/improved/) |
 
 `127.0.0.1` URLs work only while a server runs on the same device. A GitHub repository file view does not serve the website.
 
@@ -39,7 +39,7 @@ Every HTML page contains `noindex, nofollow, noarchive, nosnippet, noimageindex`
 
 GitHub Pages does not support custom response headers. Crawlers normally read the domain's `/robots.txt`, rather than the file in a project subdirectory. HTML `noindex` therefore remains the indexing control on this project Pages site. These voluntary directives are not authentication or a guarantee that every bot is blocked. Use access-controlled hosting for strict exclusion.
 
-GitHub Free Pages requires a public repository. Keeping it private requires an eligible plan or another host. Visibility changes require owner approval.
+This repository is public and uses GitHub Free Pages branch publishing. The HTML noindex directives apply to the demo site; the public GitHub source remains accessible.
 
 The retired homepage is not a publishing source. Its Pages and Actions stay disabled. The former standalone Life repository is retained for history.
 

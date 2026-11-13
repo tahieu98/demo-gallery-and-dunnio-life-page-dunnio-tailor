@@ -10,9 +10,9 @@
 - Added noindex directives to all HTML pages, crawler policy and local X-Robots-Tag response headers.
 - Retired homepage: Pages API returns 404, `has_pages: false`; Actions explicitly set to disabled and verified.
 
-## Publication pending
+## Renamed repository and publication
 
-The destination repository is private and Pages is off. Its owner must select a hosting option before publication. GitHub Free Pages requires making this repository public; a paid eligible plan or another hosting service can retain private source. No visibility change has been performed.
+The owner renamed the repository to `demo-gallery-and-dunnio-life-page-dunnio-tailor` and made it public. The Git remote, online preview links, local project mount and 404 return link now use that name. Pages uses `main` at `/` with static branch publishing. Public source remains accessible independently of the website noindex directives.
 
 ## Crawling limits
 
