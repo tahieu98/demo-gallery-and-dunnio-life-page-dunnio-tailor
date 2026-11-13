@@ -1,8 +1,8 @@
 {
-  "name": "gallery-page-dunnio-tailor",
+  "name": "dunnio-tailor-design-demos",
   "version": "1.0.0",
   "private": true,
-  "description": "Dunnio reference and improved static gallery demos",
+  "description": "Original and improved Style Gallery and Dunnio Life in one static site",
   "scripts": {
     "start": "node scripts/serve.mjs",
     "dev": "node scripts/serve.mjs",

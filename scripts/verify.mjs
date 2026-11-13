@@ -1,30 +1,25 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const manifest=JSON.parse(fs.readFileSync(path.join(root,'docs/image-manifest.json'),'utf8'));
-const errors=[];
-const check= (condition,message) => {if(!condition)errors.push(message);};
-const ids=new Set(), names=new Set();
-for(const image of manifest){
-  check(!ids.has(image.id),`Duplicate ID: ${image.id}`);ids.add(image.id);
-  check(!names.has(image.filename),`Duplicate filename: ${image.filename}`);names.add(image.filename);
-  check(image.width>0 && image.height>0,`Invalid dimensions: ${image.id}`);
-  check(image.orientation===(image.width>image.height?'landscape':image.width<image.height?'portrait':'square'),`Incorrect orientation: ${image.id}`);
-  check(image.filename.includes('-outfit-'),`Unclassified filename: ${image.id}`);
-  for(const field of ['src','thumbnail'])check(fs.existsSync(path.join(root,image[field])),`Missing ${field}: ${image.id}`);
+for(const folder of ['gallery-page-dunnio-tailor','dunnio-life-page-dunnio-tailor']){
+  const result=spawnSync(process.execPath,[path.join(root,folder,'verify.mjs')],{stdio:'inherit'});
+  if(result.status!==0)process.exit(result.status||1);
 }
-function walk(directory){return fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>entry.name.startsWith('.')?[]:entry.isDirectory()?walk(path.join(directory,entry.name)):[path.join(directory,entry.name)]);}
-for(const file of walk(root).filter(file=>/\.(html|css)$/.test(file))){
-  const content=fs.readFileSync(file,'utf8');
-  const refs=[...content.matchAll(/(?:src|href)=["']([^"']+)["']/g)].map(match=>match[1]);
-  refs.push(...[...content.matchAll(/url\(\s*["']?([^)'"\s]+)["']?\s*\)/g)].map(match=>match[1]));
-  for(const ref of refs){
-    if(/^(?:https?:|mailto:|tel:|data:|#|\/\/)/.test(ref))continue;
-    const decoded=decodeURIComponent(ref);
-    if(decoded.startsWith('#'))continue;
-    const clean=decoded.split(/[?#]/)[0];
-    check(fs.existsSync(path.resolve(path.dirname(file),clean)),`Missing reference: ${path.relative(root,file)} -> ${ref}`);
+const errors=[];
+function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')?[]:e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
+for(const file of walk(root).filter(f=>f.endsWith('.html'))){
+  const html=fs.readFileSync(file,'utf8');
+  if(!/<meta name="robots" content="[^"]*noindex/.test(html))errors.push(`Missing noindex: ${file}`);
+  if(!/<html[^>]*lang="en"/.test(html))errors.push(`Missing English language: ${file}`);
+  for(const [,ref]of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)){
+    if(/^(?:https?:|mailto:|tel:|data:|#|\/)/.test(ref))continue;
+    const target=path.resolve(path.dirname(file),decodeURIComponent(ref.split(/[?#]/)[0]));
+    if(!target.startsWith(root+path.sep)||!fs.existsSync(target))errors.push(`Broken or external local reference: ${file} -> ${ref}`);
   }
 }
-if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${manifest.length} images, unique IDs/names, native orientation, local photos, HTML/CSS asset references.`);
+const robots=fs.readFileSync(path.join(root,'robots.txt'),'utf8');
+if(!/User-agent: \*\s+Disallow: \//.test(robots)||!robots.includes('GPTBot')||!robots.includes('ClaudeBot'))errors.push('Missing crawler policies');
+if(errors.length){console.error(errors.join('\n'));process.exit(1);}
+console.log('PASS: combined site is self-contained, links resolve, English HTML has noindex, crawler policies exist.');

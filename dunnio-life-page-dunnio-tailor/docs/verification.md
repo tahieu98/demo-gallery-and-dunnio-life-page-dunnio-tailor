@@ -1,10 +1,12 @@
-# Kiểm chứng — Style Gallery
+> This report records the earlier standalone verification. For current combined-site paths and hosting status, see [hosting verification](../../docs/hosting-verification.md).
 
-Ngày 12/11/2026, trên thiết bị hiện tại. Bản local: http://127.0.0.1:4173/gallery-page-dunnio-tailor/
+# Kiểm chứng — Dunnio Life
+
+Ngày 12/11/2026, trên thiết bị hiện tại. Bản local: http://127.0.0.1:4173/dunnio-life-page-dunnio-tailor/
 
 ## Dữ liệu và tài nguyên
 
-- PASS: 28 ID và tên ảnh duy nhất; file WebP/thumbnail đầy đủ; dọc/ngang/vuông khớp kích thước ảnh nguồn.
+- PASS: 50 ID và tên ảnh duy nhất; file WebP/thumbnail đầy đủ; dọc/ngang/vuông khớp kích thước ảnh nguồn.
 - PASS: tất cả tham chiếu tài nguyên nội bộ trong HTML/CSS tồn tại; ảnh, logo, font chạy local.
 - PASS: JavaScript kiểm tra cú pháp bằng node --check; không có lỗi console trên các trang đã kiểm tra.
 
@@ -12,7 +14,7 @@ Ngày 12/11/2026, trên thiết bị hiện tại. Bản local: http://127.0.0.1
 
 | Kiểm tra | Kết quả |
 | --- | --- |
-| Bản gốc: 25 ảnh ban đầu, tải thêm khi cuộn / See more | PASS: đủ 28 ảnh |
+| Bản gốc: 25 ảnh ban đầu, tải thêm khi cuộn / See more | PASS: đủ 50 ảnh |
 | Bản gốc: menu và lightbox | PASS |
 | Bản gốc: newsletter | PASS: kiểm tra email; thông báo rõ demo không gửi đăng ký |
 | Bản cải tiến: đếm tổng và nhóm màu/khung hình | PASS |

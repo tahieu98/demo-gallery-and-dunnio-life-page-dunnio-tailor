@@ -1,72 +1,50 @@
-# Style Gallery — Dunnio Tailor
+# Dunnio Tailor — Gallery & Life design demos
 
-Bộ demo HTML/CSS/JavaScript gồm **bản gốc tham chiếu** và **bản đề xuất cải tiến**. Thu thập ngày 12/11/2026 (Asia/Bangkok), lấy đủ ảnh từ tất cả các trang phân trang.
+One static HTML/CSS/JavaScript site containing the original reference and proposed design for both collections. All demo interfaces use English.
 
-## Xem trên thiết bị
+## Online preview
 
-Mở `index.html` trực tiếp để chọn phiên bản. Hoặc dùng Node.js:
+Publishing target: [Combined design comparison](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/). Available after Pages is enabled and deployment completes.
 
-```sh
-npm start
+| Collection | Original reference | Proposed design |
+| --- | --- | --- |
+| Style Gallery · 28 photos | [Open reference](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/gallery-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/gallery-page-dunnio-tailor/improved/) |
+| Dunnio Life · 50 photos | [Open reference](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/improved/) |
+
+`127.0.0.1` URLs work only while a server runs on the same device. A GitHub repository file view does not serve the website.
+
+## Local preview
+
+Run `npm start` or double-click `start-local.cmd`. No installation is needed. Open the printed URL. Set `PORT` if 4173 is in use. Run `npm run verify` to check assets, all 78 photos, inter-collection links and crawler directives.
+
+## Structure
+
+```text
+index.html                          # Four-page comparison hub
+robots.txt                          # Crawler policy
+gallery-page-dunnio-tailor/
+  original/ improved/ assets/ docs/
+dunnio-life-page-dunnio-tailor/
+  original/ improved/ assets/ docs/
+scripts/                            # Local server and verification
 ```
 
-Không cần npm install. Trên Windows có thể nhấp đúp `start-local.cmd`; dừng bằng Ctrl+C.
+Versions share assets within each collection. The combined site does not require the separate Life checkout. Provenance and design notes are retained in each collection's `docs/` folder.
 
-- Chọn phiên bản: http://127.0.0.1:4173/gallery-page-dunnio-tailor/
-- Bản gốc: http://127.0.0.1:4173/gallery-page-dunnio-tailor/original/index.html
-- Bản cải tiến: http://127.0.0.1:4173/gallery-page-dunnio-tailor/improved/index.html
+## Publishing and crawler controls
 
-Đặt hai repo cạnh nhau với tên thư mục `gallery-page-dunnio-tailor` và `dunnio-life-page-dunnio-tailor` để chuyển giữa hai bộ sưu tập khi chạy local. Cổng mặc định 4173; có thể đặt biến PORT.
+Publish `main` → `/ (root)` using Pages branch publishing. `.nojekyll` keeps this static. There are no custom workflow dependencies. GitHub's built-in Pages deployment can appear in Actions; do not disable Actions while using Pages.
 
-## Cấu trúc
+Every HTML page contains `noindex, nofollow, noarchive, nosnippet, noimageindex`. The local server also sends `X-Robots-Tag`. `robots.txt` disallows all crawlers and explicitly names common search and AI agents.
 
-| Thư mục / file | Nội dung |
-| --- | --- |
-| original/ | DOM và CSS tham chiếu, masonry, tải thêm ảnh |
-| improved/ | Bản cải tiến: nhóm màu và khung hình |
-| assets/images/ | WebP đổi tên theo màu trang phục và khung hình |
-| assets/reference-thumbnails/ | Thumbnail gốc giữ đúng crop nguồn |
-| assets/site/ | Logo, font, icon lưu local |
-| assets/image-data.js | Metadata chạy được cả file:// và HTTP |
-| assets/lightbox.* | Trình xem ảnh dùng chung |
-| docs/image-catalog.csv | Tên trước/sau, chủ thể, màu, kích thước, URL nguồn |
-| docs/image-manifest.json | Metadata dùng để tích hợp |
-| docs/design-notes.md | Quy tắc phân loại và quyết định UX/UI |
-| docs/verification.md | Kết quả kiểm tra |
-| scripts/verify.mjs | Kiểm tra dữ liệu và tài nguyên |
+GitHub Pages does not support custom response headers. Crawlers normally read the domain's `/robots.txt`, rather than the file in a project subdirectory. HTML `noindex` therefore remains the indexing control on this project Pages site. These voluntary directives are not authentication or a guarantee that every bot is blocked. Use access-controlled hosting for strict exclusion.
 
-## Chức năng
+GitHub Free Pages requires a public repository. Keeping it private requires an eligible plan or another host. Visibility changes require owner approval.
 
-Bản gốc giữ header, breadcrumb, footer, thứ tự ảnh, crop thumbnail và masonry responsive. Hiện 25 ảnh đầu, tự nạp phần còn lại khi cuộn hoặc nhấn See more. Menu, thông tin liên hệ và liên kết về website nguồn hoạt động.
+The retired homepage is not a publishing source. Its Pages and Actions stay disabled. The former standalone Life repository is retained for history.
 
-Bản cải tiến có lọc màu, lọc ảnh dọc/ngang/vuông, tìm có dấu hoặc không dấu, sắp xếp nhóm, đếm kết quả, xóa bộ lọc, trạng thái rỗng, lưu ảnh yêu thích trên trình duyệt và URL giữ bộ lọc.
+## Demo boundaries
 
-Cả hai bản có xem ảnh lớn, trước/sau, phím mũi tên, Home/End, Esc, zoom, fullscreen khi trình duyệt cho phép, slideshow, thumbnail, tải ảnh và sao chép liên kết đến ảnh. Dialog native khóa focus và trả focus về ảnh vừa mở khi đóng.
+Original versions preserve source DOM/CSS, image order, thumbnail crops and masonry, with independent JavaScript for local interactions. Proposals group photos by the main subject's outfit color, then portrait/landscape/square. Wedding photos prioritize the groom. Search, filters, saved photos and the viewer work locally and online. Newsletter submission only validates input; live checkout, login and contact destinations open the source website.
 
-**Phạm vi:** các trang thương mại, đăng nhập, checkout, liên hệ thực tế mở website Dunnio. Newsletter chỉ kiểm tra email và thông báo rõ không gửi đăng ký. Bộ chọn ngôn ngữ mở bản dịch trang nguồn trực tuyến. Không sao chép backend Drupal, đơn hàng hoặc dịch vụ dịch máy. Bộ sưu tập dùng hoàn toàn tài nguyên local, không có tracker.
-
-## Dữ liệu ảnh
-
-28 ảnh / 11 màu. Ảnh ngang: 10, Ảnh dọc: 17, Ảnh vuông: 1.
-
-Ảnh cưới lấy trang phục chú rể; ảnh đông người ghi chú chủ thể trong CSV. Phân loại màu bằng xem ảnh, không lấy màu nền. Kích thước gốc giữ trong metadata. WebP tối đa 1920 px, không upscale. Bản cải tiến dùng object-fit: contain trong lưới và giữ tỉ lệ gốc trong lightbox. Ảnh nguồn nhỏ không được tự phục hồi chi tiết.
-
-Ví dụ: `gallery-outfit-black-landscape-001.webp`. Hai phiên bản dùng chung bộ ảnh để tiết kiệm dung lượng.
-
-## Kiểm tra
-
-```sh
-npm run verify
-node --check improved/app.js
-node --check original/reference.js
-node --check assets/lightbox.js
-```
-
-## GitHub và chi phí
-
-Repo giữ riêng tư, Actions tắt, Pages không bật. Source lưu bằng Git, không upload artifact, không dùng Git LFS. Bốn trang ở hai repo dùng khoảng 25 MiB mã và tài nguyên, không cần runner hay CI. GitHub Free không cung cấp Pages cho repo private; nếu cần URL công khai sau này, chọn static hosting hoặc cân nhắc visibility/plan riêng.
-
-Nguồn: https://dunniotailor.com/gallery.html . Hình ảnh, font, logo và CSS tham chiếu thuộc website nguồn; demo phục vụ đối chiếu thiết kế.
-
-
-English is the default interface language for both the original reference and proposed design, including filters, image captions, accessibility labels and viewer messages. Image files use English color and orientation names; original source names and URLs are retained for provenance.
+Images, fonts, logo and reference styling originate from [Dunnio Tailor](https://dunniotailor.com/). These demos support design review.
