@@ -17,6 +17,12 @@ Online preview: [Combined design comparison](https://tahieu98.github.io/demo-gal
 
 Run `npm start` or double-click `start-local.cmd`. No installation is needed. Open the printed URL. Set `PORT` if 4173 is in use. Run `npm run verify` to check assets, all 78 photos, inter-collection links and crawler directives. `npm test` checks filtering and catalog consistency. `npm run test:browser` uses the bundled Playwright runtime and a server at port 4183 (override with `DUNNIO_TEST_URL`).
 
+## Order 4 — 14 November 2026
+
+The mobile Filter dialog limits every facet to three complete option rows. Longer groups scroll independently and show a subtle scroll hint; shorter groups remain naturally sized. Row limits follow actual chip wrapping, including viewport/font changes and selected check marks. Draft selections still apply only on Apply. Desktop popovers retain their existing behavior.
+
+Run `npm run test:mobile-filters` with the same local server/runtime setup as the browser suite. See [Order 4 notes and verification](docs/order-4-design.md).
+
 ## Order 2 — 13 November 2026
 
 Order 3 updates the desktop hero on both improved pages: 10px vertical padding, a 1:3 text/photo split, no vertical divider and three collection photos. Tablet/mobile retain their existing hero treatment. See [Order 3 design and verification](docs/order-3-design.md).

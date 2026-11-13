@@ -9,7 +9,8 @@ window.DunnioGallery = {
     const labels = {outfit:'Outfit',color:'Color',occasion:'Occasion',situation:'Situation'};
     const names = {'wedding':'Wedding','business':'Business','formal-event':'Formal event','smart-casual':'Smart casual','indoor':'Indoor','outdoor':'Outdoor'};
     let saved = new Set(), state = model.parse(location.search, items), draft = null, filtered = [];
-    let toastTimer, layoutFrame, activePanel = null;
+    let toastTimer, layoutFrame, optionRowsFrame, activePanel = null;
+    const optionRowsObserver=new ResizeObserver(scheduleOptionRows);
     try {
       const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
       if (Array.isArray(stored)) saved = new Set(stored.filter(id => items.some(item => item.id === id)));
@@ -52,6 +53,7 @@ window.DunnioGallery = {
         input.addEventListener('change',()=>{
           draft[field]=input.checked ? [...draft[field],option.value] : draft[field].filter(value=>value!==option.value);
           updatePreview(container.closest('.filter-panel'));
+          scheduleOptionRows();
         });
       });
       container.append(fieldset);
@@ -61,12 +63,15 @@ window.DunnioGallery = {
       panel.querySelector('.filter-preview').textContent=`${count} matching ${count===1?'photo':'photos'}`;
     }
     function populate(panel, fields) {
+      if(panel.id==='mobile-filters')optionRowsObserver.disconnect();
       const body=panel.querySelector('.filter-body'); body.replaceChildren();
       fields.forEach(field=>fillGroup(body,field));
       if (panel.id==='mobile-filters') {
         const label=el('label','saved-option'), input=el('input'); input.type='checkbox'; input.checked=draft.saved;
         label.append(input,document.createTextNode(`Saved photos only (${saved.size})`)); body.append(label);
         input.addEventListener('change',()=>{draft.saved=input.checked;updatePreview(panel);});
+        body.querySelectorAll('.filter-options').forEach(choices=>optionRowsObserver.observe(choices));
+        scheduleOptionRows();
       }
       body.scrollTop=0;
       updatePreview(panel);
@@ -113,18 +118,49 @@ window.DunnioGallery = {
       });
     });
     const mobile=$('#mobile-filters'), mobileTrigger=$('.mobile-filter');
+    function optionRows(choices) {
+      const box=choices.getBoundingClientRect(), rows=[];
+      for(const option of choices.children){
+        const rect=option.getBoundingClientRect(), top=rect.top-box.top+choices.scrollTop;
+        const last=rows.at(-1), bottom=rect.bottom-box.top+choices.scrollTop;
+        if(!last || Math.abs(last.top-top)>1)rows.push({top,bottom});
+        else last.bottom=Math.max(last.bottom,bottom);
+      }
+      return rows;
+    }
+    function limitOptionRows() {
+      if(!mobile.open || !matchMedia('(max-width:700px)').matches)return;
+      mobile.querySelectorAll('.filter-options').forEach(choices=>{
+        const scrollTop=choices.scrollTop;
+        choices.classList.remove('is-scrollable');
+        choices.style.removeProperty('--option-rows-height');
+        choices.removeAttribute('tabindex');choices.removeAttribute('role');choices.removeAttribute('aria-label');
+        if(optionRows(choices).length<=3)return;
+        // Reserve scrollbar space before measuring: it can change how chips wrap.
+        choices.classList.add('is-scrollable');
+        const rows=optionRows(choices), padding=parseFloat(getComputedStyle(choices).paddingBottom)||0;
+        choices.style.setProperty('--option-rows-height',`${Math.ceil(rows[2].bottom+padding)}px`);
+        choices.setAttribute('tabindex','0');choices.setAttribute('role','region');
+        choices.setAttribute('aria-label',`${choices.closest('fieldset').querySelector('legend').textContent} options`);
+        choices.scrollTop=scrollTop;
+      });
+    }
+    function scheduleOptionRows(){cancelAnimationFrame(optionRowsFrame);optionRowsFrame=requestAnimationFrame(limitOptionRows);}
+    new MutationObserver(scheduleOptionRows).observe(mobile.querySelector('.filter-body'),{childList:true,subtree:true,characterData:true});
+    document.fonts?.ready.then(scheduleOptionRows);
     mobileTrigger.addEventListener('click',()=>{
       document.querySelectorAll('.filter-popover:popover-open').forEach(panel=>panel.hidePopover());
       draft=clone(state); populate(mobile,model.fields); mobile.showModal();
       document.body.classList.add('filters-open'); mobileTrigger.setAttribute('aria-expanded','true');
     });
     mobile.addEventListener('close',()=>{
+      cancelAnimationFrame(optionRowsFrame);optionRowsObserver.disconnect();
       draft=null; document.body.classList.remove('filters-open'); mobileTrigger.setAttribute('aria-expanded','false');
       if (matchMedia('(max-width:700px)').matches) mobileTrigger.focus();
     });
     mobile.addEventListener('keydown',event=>{
       if(event.key!=='Tab') return;
-      const focusable=[...mobile.querySelectorAll('button:not(:disabled),input:not(:disabled)')];
+      const focusable=[...mobile.querySelectorAll('button:not(:disabled),input:not(:disabled),[tabindex="0"]')];
       const first=focusable[0], last=focusable.at(-1);
       if(event.shiftKey && document.activeElement===first){event.preventDefault();last.focus();}
       else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
@@ -198,7 +234,7 @@ window.DunnioGallery = {
     }
     $('.save-filter').addEventListener('click',()=>{state.saved=!state.saved;render();});
     $('.empty-reset').addEventListener('click',()=>{state=model.empty();render();});
-    window.addEventListener('resize',()=>{scheduleLayout();if(activePanel)positionPanel(activePanel,$(`[popovertarget="${activePanel.id}"]`));});
+    window.addEventListener('resize',()=>{scheduleLayout();scheduleOptionRows();if(activePanel)positionPanel(activePanel,$(`[popovertarget="${activePanel.id}"]`));});
     new ResizeObserver(scheduleLayout).observe(grid);
     $('.back-top').addEventListener('click',()=>{window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});$('.brand').focus();});
     const menu=$('.menu-dialog'); $('.mobile-menu').addEventListener('click',()=>menu.showModal()); $('.menu-close').addEventListener('click',()=>menu.close());

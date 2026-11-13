@@ -44,4 +44,25 @@
 @media(max-width:991px){#collections .photo-card{width:33.333333%}.filter-row{gap:8px}.filter-trigger,.save-filter{padding:10px 13px;font-size:15px}}
 @media(max-width:700px){.collection-toolbar{display:none}.mobile-filter{position:fixed;right:0;top:50%;transform:translateY(-50%);display:inline-flex;z-index:20;min-width:58px;padding:12px 10px;gap:6px;background:var(--ink);color:white;border:1px solid var(--ink);border-radius:6px 0 0 6px;box-shadow:0 3px 16px #142a3b33;font-size:14px}.mobile-filter:active{transform:translateY(-50%) scale(.98)}.mobile-filter svg{width:17px;height:17px}.mobile-filter.is-active{background:#675332;border-color:#675332}.photo-card .save-photo{opacity:1}.photo-caption{display:none}}
 @media(max-width:575px){#collections .photo-card{width:50%}}
+/* Order 4: cap each mobile facet at three measured chip rows. */
+@media(max-width:700px){
+  .filter-dialog .filter-options{max-height:none;overflow:visible;padding:4px;margin:0}
+  .filter-dialog .filter-options.is-scrollable{
+    max-height:var(--option-rows-height,none);
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-gutter:stable;
+    scrollbar-width:thin;
+    scrollbar-color:var(--gold) var(--soft);
+    overscroll-behavior-y:contain;
+  }
+  .filter-dialog .filter-group:has(.is-scrollable)::after{
+    content:'Scroll to see more';
+    display:block;
+    padding-top:4px;
+    color:var(--muted);
+    font-size:12px;
+    text-align:right;
+  }
+}
 @media(prefers-reduced-motion:reduce){.photo-caption,.save-photo{transition:none!important}}

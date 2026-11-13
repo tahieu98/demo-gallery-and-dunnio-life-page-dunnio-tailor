@@ -1,0 +1,64 @@
+[
+  {
+    "folder": "gallery-page-dunnio-tailor",
+    "total": 28,
+    "initial": [
+      {
+        "name": "Outfit",
+        "rows": 10,
+        "visible": 3,
+        "scrollable": true
+      },
+      {
+        "name": "Color",
+        "rows": 3,
+        "visible": 3,
+        "scrollable": false
+      },
+      {
+        "name": "Occasion",
+        "rows": 2,
+        "visible": 2,
+        "scrollable": false
+      },
+      {
+        "name": "Situation",
+        "rows": 1,
+        "visible": 1,
+        "scrollable": false
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "folder": "dunnio-life-page-dunnio-tailor",
+    "total": 50,
+    "initial": [
+      {
+        "name": "Outfit",
+        "rows": 20,
+        "visible": 3,
+        "scrollable": true
+      },
+      {
+        "name": "Color",
+        "rows": 4,
+        "visible": 3,
+        "scrollable": true
+      },
+      {
+        "name": "Occasion",
+        "rows": 2,
+        "visible": 2,
+        "scrollable": false
+      },
+      {
+        "name": "Situation",
+        "rows": 1,
+        "visible": 1,
+        "scrollable": false
+      }
+    ],
+    "status": "PASS"
+  }
+]

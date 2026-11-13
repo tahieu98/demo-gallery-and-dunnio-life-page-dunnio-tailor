@@ -8,6 +8,7 @@
     "dev": "node scripts/serve.mjs",
     "verify": "node scripts/verify.mjs",
     "test": "node --test scripts/*.test.mjs",
-    "test:browser": "node scripts/browser-order-2.mjs"
+    "test:browser": "node scripts/browser-order-2.mjs",
+    "test:mobile-filters": "node scripts/browser-order-4.mjs"
   }
 }
