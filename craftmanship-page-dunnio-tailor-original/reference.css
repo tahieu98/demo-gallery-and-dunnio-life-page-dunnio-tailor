@@ -1,0 +1,10 @@
+.reference-menu{inset:0 0 0 auto;margin:0;width:420px;max-width:94vw;height:100dvh;max-height:none;overflow:auto;padding:24px;border:0;background:#fff;color:#333;z-index:99999;font:18px/1.5 Afacad,Arial,sans-serif}
+.reference-menu::backdrop,.profile-dialog::backdrop{background:#0008}
+.reference-menu ul{list-style:none;padding-left:16px}.reference-menu nav>ul{padding-left:0}.reference-menu li{padding:6px 0}.reference-menu .nolink{font-weight:600}.reference-menu a{color:#333;text-decoration:none}.reference-menu a:hover{text-decoration:underline}
+.reference-close{position:sticky;top:0;margin-left:auto;display:block;width:44px;height:44px;border:0;background:#fff;font:32px/1 Arial;cursor:pointer}
+.header-action>ul>li.reference-language-open>ul{display:block!important;visibility:visible!important;opacity:1!important;transform:none!important;z-index:9999}
+.reference-form-status{font-size:14px;line-height:1.5;color:#f3dfad;max-width:400px;margin-top:10px}.header-bars-btn,.header-menu .nolink{cursor:pointer}
+:focus-visible{outline:2px solid #9b7c37;outline-offset:3px}.reference-switch{position:fixed;left:14px;bottom:14px;z-index:1000;background:#fff;color:#142a3b;border:1px solid #d6d1c2;padding:9px 14px;font:15px Afacad,Arial,sans-serif;box-shadow:0 2px 10px #0001}.reference-switch:hover{color:#142a3b;text-decoration:underline}.shake-animation{animation:none!important}
+.profile-dialog{width:min(760px,94vw);max-height:90dvh;border:0;padding:24px;font:18px/1.6 Afacad,Arial,sans-serif;color:#333}.profile-dialog img{display:block;width:160px;aspect-ratio:1;object-fit:cover;float:left;margin:0 24px 16px 0}.profile-dialog h2{font:600 30px/1.2 Afacad,Arial,sans-serif}.profile-dialog p{margin:0 0 14px}.profile-dialog .profile-source{clear:both;display:block;margin-top:24px}.footer-menu-item .nolink[role="button"]{cursor:pointer}
+@media(max-width:767px){.footer-menu-item .sub-menu.reference-footer-open{display:block}.profile-dialog img{width:120px}.profile-dialog{padding:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

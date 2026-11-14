@@ -1,6 +1,6 @@
-# Dunnio Tailor — Gallery & Life design demos
+# Dunnio Tailor - Gallery, Life & Craftsmanship design demos
 
-One static HTML/CSS/JavaScript site containing the original reference and proposed design for both collections. All demo interfaces use English.
+One static HTML/CSS/JavaScript site containing six original references and proposed designs for Style Gallery, Dunnio Life and Craftsmanship. All demo interfaces use English.
 
 ## Online preview
 
@@ -10,12 +10,19 @@ Online preview: [Combined design comparison](https://tahieu98.github.io/demo-gal
 | --- | --- | --- |
 | Style Gallery · 28 photos | [Open reference](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/gallery-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/gallery-page-dunnio-tailor/improved/) |
 | Dunnio Life · 50 photos | [Open reference](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/dunnio-life-page-dunnio-tailor/improved/) |
+| Craftsmanship · Brand story | [Open reference](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/craftmanship-page-dunnio-tailor-original/) | [Open proposal](https://tahieu98.github.io/demo-gallery-and-dunnio-life-page-dunnio-tailor/craftmanship-page-dunnio-tailor-proposed/) |
 
 `127.0.0.1` URLs work only while a server runs on the same device. A GitHub repository file view does not serve the website.
 
 ## Local preview
 
 Run `npm start` or double-click `start-local.cmd`. No installation is needed. Open the printed URL. Set `PORT` if 4173 is in use. Run `npm run verify` to check assets, all 78 photos, inter-collection links and crawler directives. `npm test` checks filtering and catalog consistency. `npm run test:browser` uses the bundled Playwright runtime and a server at port 4183 (override with `DUNNIO_TEST_URL`).
+
+## Order 5 - 15 November 2026
+
+Added `craftmanship-page-dunnio-tailor-original/` and `craftmanship-page-dunnio-tailor-proposed/`, sharing local photos, fonts and profile prose in `craftmanship-page-dunnio-tailor-assets/`. The original retains the captured three-profile layout with working local interactions. The proposal connects Veston Duy Nguyễn's 2009 beginnings, the 2019 Dunnio launch, founder Duy Nguyễn, experienced Vietnamese tailors and Production / Technology / Platform in a chapter-based story.
+
+Both pages work by opening their HTML files directly. `npm run test:craftmanship` uses Playwright against port 4195 by default; override `DUNNIO_TEST_URL` to point to the printed local server base or Pages. See [structure, sources and design decisions](docs/order-5-design.md), [verification](docs/order-5-verification.md) and [third-party assets](craftmanship-page-dunnio-tailor-assets/THIRD-PARTY.md). Internal source PDFs stay outside this public repository.
 
 ## Order 4 — 14 November 2026
 
@@ -43,12 +50,15 @@ Per-collection runtime data, JSON manifests and CSV catalogs are synchronized by
 ## Structure
 
 ```text
-index.html                          # Four-page comparison hub
+index.html                          # Six-page comparison hub
 robots.txt                          # Crawler policy
 gallery-page-dunnio-tailor/
   original/ improved/ assets/ docs/
 dunnio-life-page-dunnio-tailor/
   original/ improved/ assets/ docs/
+craftmanship-page-dunnio-tailor-original/
+craftmanship-page-dunnio-tailor-proposed/
+craftmanship-page-dunnio-tailor-assets/
 scripts/                            # Local server and verification
 shared/                             # Shared filter model, controller and CSS
 outputs/order-2/                    # Combined Excel catalog

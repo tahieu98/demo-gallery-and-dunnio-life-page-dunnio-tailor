@@ -1,0 +1,325 @@
+[
+  {
+    "file": "anniversary-2019.webp",
+    "source": "https://i1-kinhdoanh.vnecdn.net/2019/10/04/1-12-9692-1570175315.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=i3MZwz_o-eCHbwBlndG5Jw",
+    "bytes": 36464,
+    "sha256": "15cc3cbcf3de90b0f4ff2e30521a39ef477bd007559dac2c08861d0c527283ad",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "app-2019.webp",
+    "source": "https://icdn.dantri.com.vn/thumb_w/960/2019/10/05/dunnio-ra-mat-app-may-suit-dau-tien-tai-viet-nam-finaldocx-1570232710953.jpeg",
+    "bytes": 67352,
+    "sha256": "83f00a05d58834bf3ce2cb47a55edf60f9aca7c00d5ce4ecf4353d9284ee8efb",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "archive-tailoring.webp",
+    "source": "https://i1-kinhdoanh.vnecdn.net/2019/10/04/1655363091-w500-3781-1570175315.png?w=1020&h=0&q=100&dpr=1&fit=crop&s=RsmeQwpNibtJOfjXGj4TAg",
+    "bytes": 21172,
+    "sha256": "314a2c2617b49e447e2411581c85286836b80aedbeb66b391c6759598bd12274",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "collection-2019.webp",
+    "source": "https://i1-kinhdoanh.vnecdn.net/2019/10/04/3-1-2-9363-1570175316.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=95Lgy81BOoeRn6N420-1Pg",
+    "bytes": 23868,
+    "sha256": "4c44ad67e98eeae8826d75f7570e550e11f97d314eca7f68839bda7134a79bbd",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "doan.webp",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_555x557/public/2026-08/tran_van_doan_21_09_1979.jpg?itok=22ZWuIIm",
+    "bytes": 51078,
+    "sha256": "7b20574c7b41bf0d9d633ba33df1357e237c5040e56cd47b10158875ee8cae8c",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "founder.webp",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_555x557/public/2026-08/duy-dat-nguyen-dunnio-tailor-ceo_0.jpg?itok=W-rc8fvj",
+    "bytes": 32008,
+    "sha256": "c421e6313c628f10239d2dc4698edf4e3fecca3cbd5e163ed5d8d2752cffb742",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "hieu.webp",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_555x557/public/2026-08/nguyen_duc_hieu_08_01_1973.jpg?itok=KHHU-AhN",
+    "bytes": 15540,
+    "sha256": "123ba5dc8077d422d010ee15fca308b1152b5860e64bba651ade7e3175fc2285",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "inter-regular.ttf",
+    "source": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "bytes": 324820,
+    "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+  },
+  {
+    "file": "logo_svg.svg",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/logo_svg.svg",
+    "bytes": 4373,
+    "sha256": "28533036d2f61a2f576b8e58168004d25ded5960327bbcf22b23ce69414848d9"
+  },
+  {
+    "file": "lucide.min.js",
+    "source": "https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js",
+    "bytes": 357796,
+    "sha256": "3411692820cb8d47543f69496aa25fd603a358f4498046f41c508a5a3342210e"
+  },
+  {
+    "file": "money-back.png",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_default/public/money-back.png?itok=HTGix1w9",
+    "bytes": 1128,
+    "sha256": "46bbf5ab5f16f48fa83aef0263f7b2e79a9e7a43148eca02967d7fc7c49ef68e"
+  },
+  {
+    "file": "payment_method_groups.png",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/img/icons/icons_extend/payment_method_groups.png",
+    "bytes": 5703,
+    "sha256": "9895a6d7bdb1643f8fcb3e725fed6ba507b66f9ae3b64a7d2038c1915feeb751"
+  },
+  {
+    "file": "profiles.js",
+    "source": "Public Dunnio craftsmanship profiles, captured 2026-11-15",
+    "urls": [
+      "https://dunniotailor.com/craftsmanship/duy-dat-nguyen",
+      "https://dunniotailor.com/craftsmanship/hieu-nguyen-duc",
+      "https://dunniotailor.com/craftsmanship/doan-tran-van"
+    ],
+    "bytes": 13220,
+    "sha256": "7535551bf8f52201cd555fd99e8a0c3aa9b4e50397c5dfb1bf38ae1361e59e60"
+  },
+  {
+    "file": "profiles.json",
+    "source": "Public Dunnio craftsmanship profiles, captured 2026-11-15",
+    "urls": [
+      "https://dunniotailor.com/craftsmanship/duy-dat-nguyen",
+      "https://dunniotailor.com/craftsmanship/hieu-nguyen-duc",
+      "https://dunniotailor.com/craftsmanship/doan-tran-van"
+    ],
+    "bytes": 14354,
+    "sha256": "7f24b4926e453ce6274ec6771f6195217f3803a1b39749ba4013242add0bae3b"
+  },
+  {
+    "file": "return.png",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_default/public/return.png?itok=4w19ihg1",
+    "bytes": 629,
+    "sha256": "b2cb843aa7f9fbcb43674772d841ea6ac85642a56d21d6f78f7480bb7e14406f"
+  },
+  {
+    "file": "sewing-machine.png",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_default/public/sewing-machine.png?itok=KLpwT76n",
+    "bytes": 972,
+    "sha256": "aac914d3c742761d92491223ab7d34bf9a3675045b273afffecf3451a66dddf8"
+  },
+  {
+    "file": "source-3073f56093d1.eot",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.eot",
+    "bytes": 20127,
+    "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+  },
+  {
+    "file": "source-356433abca6e.eot",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.eot#iefix&v=4.6.3",
+    "bytes": 76518,
+    "sha256": "50bbe9192697e791e2ee4ef73917aeb1b03e727dff08a1fc8d74f00e4aa812e1"
+  },
+  {
+    "file": "source-3eadfb8a90dc.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2",
+    "bytes": 18028,
+    "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c"
+  },
+  {
+    "file": "source-4725217a71a1.svg",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular",
+    "bytes": 391622,
+    "sha256": "6e1dd0f6822909073b441b5a6301709e7cd832e3fd385ed2eb6a3fb189b099bb"
+  },
+  {
+    "file": "source-4bba8260614d.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/font/Afacad-Regular.woff2",
+    "bytes": 27176,
+    "sha256": "917759cdcb33741b2ea5c4dac6214ee8c5ce322baa79532308f4dd9a233f9e5c"
+  },
+  {
+    "file": "source-59f30ee869ba.png",
+    "source": "https://dunniotailor.com/misc/tree-bottom.png",
+    "bytes": 129,
+    "sha256": "0fa68dee2d9911a04c53458d275865ab3d27b242ec2f76df365fba531ecd2ec8"
+  },
+  {
+    "file": "source-634daf63c573.svg",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular",
+    "bytes": 108738,
+    "sha256": "0688333129cbe4acc8baea3b35f8015287078f3035b9f56768389dd9cf8a0d91"
+  },
+  {
+    "file": "source-68be26b7103b.svg",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/icons/keyboard_arrow_down.svg",
+    "bytes": 195,
+    "sha256": "8ebba57695221df5beaf626512e281e21a3252dae96fc34e263326bfd3388021"
+  },
+  {
+    "file": "source-6914796f750d.gif",
+    "source": "https://dunniotailor.com/misc/throbber-active.gif",
+    "bytes": 1233,
+    "sha256": "4d58ffb4437135b1a4f7b8cbf01321ea85fe244416aed493ea942462f3d58c86"
+  },
+  {
+    "file": "source-6cfa5494ac33.png",
+    "source": "https://dunniotailor.com/misc/draggable.png",
+    "bytes": 268,
+    "sha256": "10aa7853a3babe185246e6f1fad2c5800902a268dd63b66c53b96889ee5188f3"
+  },
+  {
+    "file": "source-744418bc4aca.eot",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.eot?v=4.6.3",
+    "bytes": 76518,
+    "sha256": "50bbe9192697e791e2ee4ef73917aeb1b03e727dff08a1fc8d74f00e4aa812e1"
+  },
+  {
+    "file": "source-7ea0475cbc6a.png",
+    "source": "https://dunniotailor.com/misc/throbber-inactive.png",
+    "bytes": 320,
+    "sha256": "3dfc7f57df739ac6410ddf0791b80fe55de158c52c294b46046f4366f35e043e"
+  },
+  {
+    "file": "source-99045627ba41.woff",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.woff",
+    "bytes": 23424,
+    "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742"
+  },
+  {
+    "file": "source-a45cae24bead.eot",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.eot#iefix",
+    "bytes": 20127,
+    "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+  },
+  {
+    "file": "source-a5b1df10a412.gif",
+    "source": "https://dunniotailor.com/sites/all/modules/contrib/ctools/images/status-active.gif",
+    "bytes": 2196,
+    "sha256": "1fcc7cb754ce9a5f210e6ab8f66ac51945d0bbb6e2d220c595ba0e4876ceafcf"
+  },
+  {
+    "file": "source-a7cfe3ec793a.ttf",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/css/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf",
+    "bytes": 45404,
+    "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456"
+  },
+  {
+    "file": "source-bf734e11eb26.ttf",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.ttf?v=4.6.3",
+    "bytes": 152796,
+    "sha256": "ae19e2e4c04f2b04bf030684c4c1db8faf5c8fe3ee03d1e0c409046608b38912"
+  },
+  {
+    "file": "source-c62a4228e8d5.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/font/GaramondPremrPro.woff2",
+    "bytes": 126344,
+    "sha256": "c9a33cb56441ca56f2cb7b87ab4582a8889f5b67448266591de30e81a3eaff53"
+  },
+  {
+    "file": "source-c7b215222fae.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/font/Afacad-SemiBold.woff2",
+    "bytes": 28536,
+    "sha256": "1f46c3468044601c28ef53f35ac7fbd69585b508456d5c313ee207d5d8f835bd"
+  },
+  {
+    "file": "source-c931d64b7d4d.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/font/Afacad-Bold.woff2",
+    "bytes": 27756,
+    "sha256": "ead6a79c5c3c0b8550380e983e8fd220950ec5d4286bfe60f929b878141e0537"
+  },
+  {
+    "file": "source-cdc79e3ebdb1.woff",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.woff?v=4.6.3",
+    "bytes": 90412,
+    "sha256": "adbc4f95eb6d7f2738959cf0ecbc374672fce47e856050a8e9791f457623ac2c"
+  },
+  {
+    "file": "source-dce62ce16ce9.woff2",
+    "source": "https://dunniotailor.com/sites/all/libraries/fontawesome/fonts/fontawesome-webfont.woff2?v=4.6.3",
+    "bytes": 71896,
+    "sha256": "7dacf83f51179de8d7980a513e67ab3a08f2c6272bb5946df8fd77c0d1763b73"
+  },
+  {
+    "file": "source-ef5ca3cc066d.woff2",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/font/Afacad-Medium.woff2",
+    "bytes": 28356,
+    "sha256": "d0719240b0731c510caf3f90124e620856c2204e9dcaac0c1117684a86d92111"
+  },
+  {
+    "file": "source-f7db5d212b09.png",
+    "source": "https://dunniotailor.com/misc/tree.png",
+    "bytes": 130,
+    "sha256": "ae69e5e112f0a809f79177ea18fa433baaf1ccf1bc4d5f078ed5482e92b9927c"
+  },
+  {
+    "file": "source-f8dbb1c5250a.png",
+    "source": "https://dunniotailor.com/misc/grippie.png",
+    "bytes": 106,
+    "sha256": "cd2532a071fb1aeeb3382db826860d52c149727769cf500e64bb157d05c1e332"
+  },
+  {
+    "file": "suit.png",
+    "source": "https://dunniotailor.com/sites/default/files/styles/style_default/public/suit.png?itok=3axvSCA7",
+    "bytes": 1128,
+    "sha256": "f07b3626c8313df8690f0569ae3ed2dcc51031b9907750ef8de6968113f86592"
+  },
+  {
+    "file": "whatsapp.svg",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/img/icons/whatsapp.svg",
+    "bytes": 2562,
+    "sha256": "63e110a9e8c409211ff050d2b0a99883eb73a88d93d86865154d34e6780ec3e4"
+  },
+  {
+    "file": "workshop-cutting.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/work-shop-3.webp",
+    "bytes": 165390,
+    "sha256": "addfd7cbbca8f8e3ca811457186166340e69be74ca743b9969cac1ca2cde641b",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "workshop-global.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/workshop-6.png",
+    "bytes": 111116,
+    "sha256": "69e815aef48c955519f7d731f3d3e852dc3fc1365f5175c4b2a5230270d77c6d",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "workshop-hero.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/workshop-1.png",
+    "bytes": 155924,
+    "sha256": "6f98791a86856764a37ea1262a999c9d9291d1c0aec6d8c3b0108a8736121972",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "workshop-network.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/workshop-5.png",
+    "bytes": 119302,
+    "sha256": "61f25cc97bba907797629e6d9264637d3201f96850f4a92903fb3e2dacdac12e",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "workshop-people.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/workshop-2.png",
+    "bytes": 170538,
+    "sha256": "c0f5637376f312bd64ed9b6b0f13c6405b3ec0cc171f6a5ad1bb8d0ce91f8d4e",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "workshop-quality.webp",
+    "source": "https://dunniotailor.com/sites/default/files/landing_page/workshop/workshop-4.png",
+    "bytes": 106952,
+    "sha256": "f41e51ebd87e24eab42d2bbf14a0348f76e23dd3776a3e4db1807ebefe83893a",
+    "usage": "Source photograph downloaded and converted to WebP for design review; no synthetic subjects"
+  },
+  {
+    "file": "zalo.svg",
+    "source": "https://dunniotailor.com/sites/all/themes/t4t_theme/img/icons/zalo.svg",
+    "bytes": 4099,
+    "sha256": "d1b4e85a4040f643d318a0082b4f054e2226ede264f066394c8c11706cefd500"
+  }
+]

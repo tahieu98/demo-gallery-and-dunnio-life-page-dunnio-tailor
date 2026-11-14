@@ -11,7 +11,7 @@ const errors=[];
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.name.startsWith('.')?[]:e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 for(const file of walk(root).filter(f=>f.endsWith('.html'))){
   const html=fs.readFileSync(file,'utf8');
-  if(!/<meta name="robots" content="[^"]*noindex/.test(html))errors.push(`Missing noindex: ${file}`);
+  if(!/<meta\b(?=[^>]*\bname=["']robots["'])(?=[^>]*\bcontent=["'][^"']*noindex)/i.test(html))errors.push(`Missing noindex: ${file}`);
   if(!/<html[^>]*lang="en"/.test(html))errors.push(`Missing English language: ${file}`);
   for(const [,ref]of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)){
     if(/^(?:https?:|mailto:|tel:|data:|#|\/)/.test(ref))continue;

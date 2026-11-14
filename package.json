@@ -2,13 +2,14 @@
   "name": "dunnio-tailor-design-demos",
   "version": "1.0.0",
   "private": true,
-  "description": "Original and improved Style Gallery and Dunnio Life in one static site",
+  "description": "Original and proposed Style Gallery, Dunnio Life and Craftsmanship in one static site",
   "scripts": {
     "start": "node scripts/serve.mjs",
     "dev": "node scripts/serve.mjs",
     "verify": "node scripts/verify.mjs",
     "test": "node --test scripts/*.test.mjs",
     "test:browser": "node scripts/browser-order-2.mjs",
-    "test:mobile-filters": "node scripts/browser-order-4.mjs"
+    "test:mobile-filters": "node scripts/browser-order-4.mjs",
+    "test:craftmanship": "node scripts/browser-order-5.mjs"
   }
 }
